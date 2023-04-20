@@ -49,3 +49,6 @@ def main():
     print("Intercept:", model.bias)
     y_pred = model.predict(X)
     print("R-squared:", 1 - np.sum((y - y_pred) ** 2) / np.sum((y - np.mean(y)) ** 2))
+
+if __name__ == '__main__':
+    main()
