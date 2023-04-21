@@ -37,8 +37,8 @@ class LinearRegression:
 def main():
     # Generate toy data
     np.random.seed(0)
-    X = np.random.rand(100, 1)
-    y = 2 * X.squeeze() + np.random.normal(scale=0.1, size=100)
+    X = np.random.rand(100, 5)
+    y = 2 * X.dot(np.ones(5)) + np.random.normal(scale=0.1, size=100)
     
     # Fit linear regression model
     model = LinearRegression(learning_rate=0.1, n_iters=1000)
